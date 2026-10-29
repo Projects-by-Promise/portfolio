@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" role="img" aria-label="Certification badge placeholder">
+  <rect x="2" y="2" width="68" height="68" rx="14" fill="#0078d4" fill-opacity=".12" stroke="#3b9dff" stroke-width="2" stroke-dasharray="5 4"/>
+  <circle cx="36" cy="31" r="13" fill="none" stroke="#3b9dff" stroke-width="3"/>
+  <path d="M29 42l-3 15 10-5 10 5-3-15" fill="none" stroke="#3b9dff" stroke-width="3" stroke-linejoin="round"/>
+</svg>
