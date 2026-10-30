@@ -442,13 +442,23 @@ main:focus { outline: none; }
 /* 12. CERTIFICATIONS & EDUCATION ========================================= */
 .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem; }
 .cert-card { display: flex; gap: 1.2rem; padding: 1.5rem; }
-.cert-logo { width: 72px; height: 72px; flex-shrink: 0; border-radius: 14px; object-fit: contain; }
+.cert-logo { width: 88px; height: 88px; flex-shrink: 0; border-radius: 14px; object-fit: contain; }
 .cert-body { display: flex; flex-direction: column; gap: .8rem; min-width: 0; }
 .cert-title { font-size: 1.05rem; }
 .cert-meta { display: grid; gap: .35rem; font-size: .88rem; }
 .cert-meta > div { display: flex; flex-wrap: wrap; gap: .4rem; }
 .cert-meta dt { color: var(--color-text-muted); min-width: 100px; }
 .cert-body .btn { align-self: flex-start; }
+
+.cert-group-title { font-size: 1.15rem; margin: 2.2rem 0 1rem; }
+.cert-group-title:first-of-type { margin-top: 0; }
+
+/* Credly badge embeds */
+.credly-grid { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+.credly-card { display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: .8rem; padding: 1.25rem 1rem; min-height: 340px; }
+.credly-card iframe { border: 0; border-radius: 10px; max-width: 100%; background: #fff; }
+.credly-verify { display: inline-flex; align-items: center; gap: .35rem; font-size: .85rem; color: var(--color-text-muted); }
+.credly-verify:hover { color: var(--color-text); }
 
 .edu-card { display: flex; gap: 1.2rem; padding: 1.5rem 1.6rem; }
 .edu-title { font-size: 1.15rem; margin-bottom: .35rem; }
