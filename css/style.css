@@ -450,6 +450,9 @@ main:focus { outline: none; }
 .cert-meta dt { color: var(--color-text-muted); min-width: 100px; }
 .cert-body .btn { align-self: flex-start; }
 
+.cert-group-title { font-size: 1.15rem; margin: 2.2rem 0 1rem; }
+.cert-group-title:first-of-type { margin-top: 0; }
+
 /* Credly badge embeds */
 .credly-grid { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
 .credly-card { display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: .8rem; padding: 1.25rem 1rem; min-height: 340px; }
