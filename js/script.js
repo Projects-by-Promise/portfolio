@@ -22,9 +22,9 @@
    *    the related buttons show a hint instead of opening a broken link.
    * ---------------------------------------------------------------------- */
   var SITE_CONFIG = {
-    email: "[ADD EMAIL]",                       // e.g. "you@example.com"
-    githubUrl: "[ADD GITHUB URL]",              // e.g. "https://github.com/your-username"
-    linkedinUrl: "[ADD LINKEDIN URL]",          // e.g. "https://www.linkedin.com/in/your-profile"
+    email: "promiseigbochizor@gmail.com",                       // e.g. "you@example.com"
+    githubUrl: "https://github.com/Promise-Igbo",              // e.g. "https://github.com/your-username"
+    linkedinUrl: "www.linkedin.com/in/promise-igbo",          // e.g. "https://www.linkedin.com/in/your-profile"
     cvUrl: "assets/documents/Promise-Igbo-CV.pdf", // relative path — keep it relative for GitHub Pages
     location: "Nigeria",
     emailSubject: "Hello Promise — opportunity / collaboration"
