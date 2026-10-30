@@ -442,7 +442,7 @@ main:focus { outline: none; }
 /* 12. CERTIFICATIONS & EDUCATION ========================================= */
 .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem; }
 .cert-card { display: flex; gap: 1.2rem; padding: 1.5rem; }
-.cert-logo { width: 72px; height: 72px; flex-shrink: 0; border-radius: 14px; object-fit: contain; }
+.cert-logo { width: 88px; height: 88px; flex-shrink: 0; border-radius: 14px; object-fit: contain; }
 .cert-body { display: flex; flex-direction: column; gap: .8rem; min-width: 0; }
 .cert-title { font-size: 1.05rem; }
 .cert-meta { display: grid; gap: .35rem; font-size: .88rem; }
