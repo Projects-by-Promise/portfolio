@@ -450,6 +450,13 @@ main:focus { outline: none; }
 .cert-meta dt { color: var(--color-text-muted); min-width: 100px; }
 .cert-body .btn { align-self: flex-start; }
 
+/* Credly badge embeds */
+.credly-grid { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+.credly-card { display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: .8rem; padding: 1.25rem 1rem; min-height: 340px; }
+.credly-card iframe { border: 0; border-radius: 10px; max-width: 100%; background: #fff; }
+.credly-verify { display: inline-flex; align-items: center; gap: .35rem; font-size: .85rem; color: var(--color-text-muted); }
+.credly-verify:hover { color: var(--color-text); }
+
 .edu-card { display: flex; gap: 1.2rem; padding: 1.5rem 1.6rem; }
 .edu-title { font-size: 1.15rem; margin-bottom: .35rem; }
 .edu-school, .edu-date, .edu-notes { color: var(--color-text-muted); font-size: .94rem; }
