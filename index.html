@@ -342,9 +342,10 @@
               </dl>
               <h4 class="mini-title">Key technical highlights</h4>
               <ul class="highlights">
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. reusable modules for networking and compute]</span></li>
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. remote state in Azure Storage]</span></li>
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. OIDC login from GitHub Actions to Azure]</span></li>
+                <li>Reusable Terraform modules (networking, App Service, MySQL, Key Vault, storage, private endpoints, monitoring) composed into six independent roots: dev, staging and prod, each with a Front Door or Application Gateway option.</li>
+                <li>Remote state in Azure Storage with Entra ID authentication, blob lease locking, versioning and soft delete, using a separate container per environment and a separate state key per ingress.</li>
+                <li>Passwordless OIDC login from GitHub Actions to Azure: three managed identities per environment (read-only PR, plan and apply), each federated to a single GitHub Environment, with no client secrets.</li>
+                <li>GitHub Actions pipeline with read-only plans on pull requests, dev → staging → prod promotion that applies the exact saved plan, a prod approval gate, and scheduled drift detection.</li>
               </ul>
               <ul class="tag-list tag-list-sm" aria-label="Technologies used"><li>Azure</li><li>Terraform</li><li>GitHub Actions</li></ul>
               <div class="project-actions">
