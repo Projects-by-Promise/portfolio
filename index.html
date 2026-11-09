@@ -396,13 +396,14 @@
               </dl>
               <h4 class="mini-title">Key technical highlights</h4>
               <ul class="highlights">
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. Kubernetes manifests or Helm chart]</span></li>
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. rolling updates and health probes]</span></li>
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. autoscaling configuration]</span></li>
+                <li>Helm chart (with dev, staging and prod values and a values schema) plus Kustomize base and overlays, covering the deployment, service, ingress, autoscaler, network policy, disruption budget and Key Vault secrets.</li>
+                <li>Zero-downtime rolling updates (maxSurge 25%, maxUnavailable 0) with startup, readiness and liveness probes; Helm deploys atomically, then runs helm test and a smoke test, and rolls back on failure.</li>
+                <li>Horizontal Pod Autoscaler on CPU (70%) and memory (80%): 1–3 pods in dev, 2–6 in staging and 3–20 in prod, with fast scale-up and gradual scale-down.</li>
+                <li>Image built once and the same digest promoted dev → staging → prod (approval for prod), with GitHub Actions signing in to Azure through OIDC, so no secrets or kubeconfig are stored.</li>
               </ul>
               <ul class="tag-list tag-list-sm" aria-label="Technologies used"><li>Docker</li><li>Kubernetes</li><li>Azure Kubernetes Service</li><li>GitHub Actions</li></ul>
               <div class="project-actions">
-                <a class="btn btn-sm btn-secondary" href="#" data-placeholder="[ADD PROJECT LINK]"><svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> Repository</a>
+                <a class="btn btn-sm btn-secondary" href="https://github.com/Projects-by-Promise/AKS-Platform" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> Repository</a>
                 <a class="btn btn-sm btn-ghost" href="#" data-placeholder="[ADD PROJECT LINK]"><svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg> Live Demo</a>
               </div>
             </div>
