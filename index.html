@@ -332,7 +332,6 @@
               <img src="assets/images/projects/azure-terraform.svg" width="640" height="360" alt="Architecture diagram placeholder: GitHub repository to GitHub Actions to Terraform to Azure resources" loading="lazy" decoding="async">
             </figure>
             <div class="project-body">
-              <span class="badge badge-template">Template</span>
               <h3 class="project-title">Azure Infrastructure with Terraform</h3>
               <dl class="project-details">
                 <dt>Problem</dt>
@@ -361,7 +360,6 @@
               <img src="assets/images/projects/cicd-pipeline.svg" width="640" height="360" alt="Architecture diagram placeholder: commit to build, test, security scan, container image and deployment to Azure" loading="lazy" decoding="async">
             </figure>
             <div class="project-body">
-              <span class="badge badge-template">Template</span>
               <h3 class="project-title">Automated CI/CD Pipeline</h3>
               <dl class="project-details">
                 <dt>Problem</dt>
@@ -371,14 +369,15 @@
               </dl>
               <h4 class="mini-title">Key technical highlights</h4>
               <ul class="highlights">
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. build, test and scan stages]</span></li>
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. environment approvals before production]</span></li>
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. container image pushed to a registry]</span></li>
+                <li>Build, test and scan stages: lint and unit/integration tests, then CodeQL, Trivy, Gitleaks, Checkov, Hadolint and actionlint, with a Trivy gate and SBOM on every image.</li>
+                <li>Environment approvals before production: dev → staging → production promotion, staging and production deployed to a slot, verified with a health check and swapped in, with automatic rollback if checks fail.</li>
+                <li>Container image built once and pushed to Azure Container Registry with passwordless OIDC (no Azure secrets anywhere); App Service pulls it with a managed identity.</li>
+                <li>Ready-made stack templates for Node.js, .NET, Python, Java (Maven/Gradle) and Go, plus Terraform for the registry, App Service, Key Vault, networking and monitoring.</li>
               </ul>
               <ul class="tag-list tag-list-sm" aria-label="Technologies used"><li>GitHub Actions</li><li>Azure</li><li>Docker</li></ul>
               <div class="project-actions">
-                <a class="btn btn-sm btn-secondary" href="#" data-placeholder="[ADD PROJECT LINK]"><svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> Repository</a>
-                <a class="btn btn-sm btn-ghost" href="#" data-placeholder="[ADD PROJECT LINK]"><svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg> Live Demo</a>
+                <a class="btn btn-sm btn-secondary" href="https://github.com/Projects-by-Promise/Automated-CI-CD-Pipeline" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> Repository</a>
+                <a class="btn btn-sm btn-ghost" href="https://github.com/Projects-by-Promise/Automated-CI-CD-Pipeline/blob/main/live-demo.mp4" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg> Live Demo</a>
               </div>
             </div>
           </article>
@@ -388,7 +387,6 @@
               <img src="assets/images/projects/kubernetes-deployment.svg" width="640" height="360" alt="Architecture diagram placeholder: Docker image to container registry to Azure Kubernetes Service" loading="lazy" decoding="async">
             </figure>
             <div class="project-body">
-              <span class="badge badge-template">Template</span>
               <h3 class="project-title">Kubernetes Application Deployment</h3>
               <dl class="project-details">
                 <dt>Problem</dt>
@@ -398,14 +396,15 @@
               </dl>
               <h4 class="mini-title">Key technical highlights</h4>
               <ul class="highlights">
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. Kubernetes manifests or Helm chart]</span></li>
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. rolling updates and health probes]</span></li>
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. autoscaling configuration]</span></li>
+                <li>Helm chart (with dev, staging and prod values and a values schema) plus Kustomize base and overlays, covering the deployment, service, ingress, autoscaler, network policy, disruption budget and Key Vault secrets.</li>
+                <li>Zero-downtime rolling updates (maxSurge 25%, maxUnavailable 0) with startup, readiness and liveness probes; Helm deploys atomically, then runs helm test and a smoke test, and rolls back on failure.</li>
+                <li>Horizontal Pod Autoscaler on CPU (70%) and memory (80%): 1–3 pods in dev, 2–6 in staging and 3–20 in prod, with fast scale-up and gradual scale-down.</li>
+                <li>Image built once and the same digest promoted dev → staging → prod (approval for prod), with GitHub Actions signing in to Azure through OIDC, so no secrets or kubeconfig are stored.</li>
               </ul>
               <ul class="tag-list tag-list-sm" aria-label="Technologies used"><li>Docker</li><li>Kubernetes</li><li>Azure Kubernetes Service</li><li>GitHub Actions</li></ul>
               <div class="project-actions">
-                <a class="btn btn-sm btn-secondary" href="#" data-placeholder="[ADD PROJECT LINK]"><svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> Repository</a>
-                <a class="btn btn-sm btn-ghost" href="#" data-placeholder="[ADD PROJECT LINK]"><svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg> Live Demo</a>
+                <a class="btn btn-sm btn-secondary" href="https://github.com/Projects-by-Promise/AKS-Platform" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> Repository</a>
+                <a class="btn btn-sm btn-ghost" href="https://github.com/Projects-by-Promise/AKS-Platform/blob/main/live-demo.mp4" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg> Live Demo</a>
               </div>
             </div>
           </article>
@@ -415,7 +414,6 @@
               <img src="assets/images/projects/devsecops-pipeline.svg" width="640" height="360" alt="Architecture diagram placeholder: pull request checked by CodeQL, Dependabot and secret scanning before merge" loading="lazy" decoding="async">
             </figure>
             <div class="project-body">
-              <span class="badge badge-template">Template</span>
               <h3 class="project-title">DevSecOps Pipeline</h3>
               <dl class="project-details">
                 <dt>Problem</dt>
@@ -425,13 +423,14 @@
               </dl>
               <h4 class="mini-title">Key technical highlights</h4>
               <ul class="highlights">
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. CodeQL code scanning on pull requests]</span></li>
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. Dependabot alerts and version updates]</span></li>
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. secret scanning with push protection]</span></li>
+                <li>CodeQL code scanning (security-extended queries, languages auto-detected) on every pull request, on main and weekly, with results in GitHub code scanning.</li>
+                <li>Dependabot version updates on a weekly schedule, with optional auto-merge for low-risk patch and minor updates, plus dependency review and Trivy filesystem scans that block high-severity issues.</li>
+                <li>Secret detection with Gitleaks (redacted output) on every pull request and push, plus a weekly full-history scan; any secret blocks the merge and follows an incident-response runbook.</li>
+                <li>Infrastructure-as-code and pipeline checks (Checkov, TFLint, Trivy, actionlint, zizmor, SHA-pinned actions), severity-based gates, an expiring exception register and a weekly security report.</li>
               </ul>
               <ul class="tag-list tag-list-sm" aria-label="Technologies used"><li>GitHub Advanced Security</li><li>CodeQL</li><li>Dependabot</li><li>Secret Scanning</li></ul>
               <div class="project-actions">
-                <a class="btn btn-sm btn-secondary" href="#" data-placeholder="[ADD PROJECT LINK]"><svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> Repository</a>
+                <a class="btn btn-sm btn-secondary" href="https://github.com/Projects-by-Promise/DevSecOps" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> Repository</a>
                 <a class="btn btn-sm btn-ghost" href="#" data-placeholder="[ADD PROJECT LINK]"><svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg> Live Demo</a>
               </div>
             </div>
