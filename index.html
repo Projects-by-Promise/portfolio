@@ -371,13 +371,14 @@
               </dl>
               <h4 class="mini-title">Key technical highlights</h4>
               <ul class="highlights">
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. build, test and scan stages]</span></li>
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. environment approvals before production]</span></li>
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. container image pushed to a registry]</span></li>
+                <li>Build, test and scan stages: lint and unit/integration tests, then CodeQL, Trivy, Gitleaks, Checkov, Hadolint and actionlint, with a Trivy gate and SBOM on every image.</li>
+                <li>Environment approvals before production: dev → staging → production promotion, staging and production deployed to a slot, verified with a health check and swapped in, with automatic rollback if checks fail.</li>
+                <li>Container image built once and pushed to Azure Container Registry with passwordless OIDC (no Azure secrets anywhere); App Service pulls it with a managed identity.</li>
+                <li>Ready-made stack templates for Node.js, .NET, Python, Java (Maven/Gradle) and Go, plus Terraform for the registry, App Service, Key Vault, networking and monitoring.</li>
               </ul>
               <ul class="tag-list tag-list-sm" aria-label="Technologies used"><li>GitHub Actions</li><li>Azure</li><li>Docker</li></ul>
               <div class="project-actions">
-                <a class="btn btn-sm btn-secondary" href="#" data-placeholder="[ADD PROJECT LINK]"><svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> Repository</a>
+                <a class="btn btn-sm btn-secondary" href="https://github.com/Projects-by-Promise/Automated-CI-CD-Pipeline" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> Repository</a>
                 <a class="btn btn-sm btn-ghost" href="#" data-placeholder="[ADD PROJECT LINK]"><svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg> Live Demo</a>
               </div>
             </div>
