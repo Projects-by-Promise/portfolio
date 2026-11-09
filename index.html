@@ -326,7 +326,7 @@
           <!-- ===== PROJECT CARD — copy this whole <article> block to add a project ===== -->
           <article class="card project-card reveal">
             <figure class="project-media">
-              <img src="assets/images/projects/azure-terraform.svg" width="640" height="360" alt="Architecture diagram placeholder: GitHub repository to GitHub Actions to Terraform to Azure resources" loading="lazy" decoding="async">
+              <img src="assets/images/projects/azure-terraform.svg" width="640" height="360" alt="Architecture diagram: users reach a private Linux Web App through Azure Front Door Premium or Application Gateway WAF_v2; the app uses MySQL, Key Vault and Storage over private endpoints in a VNet with App Insights; GitHub Actions deploys with Terraform via OIDC and remote state in Azure Storage" loading="lazy" decoding="async">
             </figure>
             <div class="project-body">
               <h3 class="project-title">Azure Infrastructure with Terraform</h3>
@@ -354,7 +354,7 @@
 
           <article class="card project-card reveal">
             <figure class="project-media">
-              <img src="assets/images/projects/cicd-pipeline.svg" width="640" height="360" alt="Architecture diagram placeholder: commit to build, test, security scan, container image and deployment to Azure" loading="lazy" decoding="async">
+              <img src="assets/images/projects/cicd-pipeline.svg" width="640" height="360" alt="Architecture diagram: pull request checks, then build once with Trivy and SBOM, push to Azure Container Registry via OIDC, and deploy to App Service dev, staging (slot swap) and approved production with automatic rollback" loading="lazy" decoding="async">
             </figure>
             <div class="project-body">
               <h3 class="project-title">Automated CI/CD Pipeline</h3>
@@ -381,7 +381,7 @@
 
           <article class="card project-card reveal">
             <figure class="project-media">
-              <img src="assets/images/projects/kubernetes-deployment.svg" width="640" height="360" alt="Architecture diagram placeholder: Docker image to container registry to Azure Kubernetes Service" loading="lazy" decoding="async">
+              <img src="assets/images/projects/kubernetes-deployment.svg" width="640" height="360" alt="Architecture diagram: GitHub Actions builds once and pushes to the dev registry, staging and prod import the same digest, and Helm deploys to AKS where ingress routes to a service and autoscaled pods with probes, workload identity, Key Vault and monitoring" loading="lazy" decoding="async">
             </figure>
             <div class="project-body">
               <h3 class="project-title">Kubernetes Application Deployment</h3>
@@ -408,7 +408,7 @@
 
           <article class="card project-card reveal">
             <figure class="project-media">
-              <img src="assets/images/projects/devsecops-pipeline.svg" width="640" height="360" alt="Architecture diagram placeholder: pull request checked by CodeQL, Dependabot and secret scanning before merge" loading="lazy" decoding="async">
+              <img src="assets/images/projects/devsecops-pipeline.svg" width="640" height="360" alt="Architecture diagram: every pull request runs CodeQL, Gitleaks, dependency review with Trivy, and IaC and pipeline policy checks; severity gates and code owner review protect main; results go to GitHub code scanning with weekly rescans and reports" loading="lazy" decoding="async">
             </figure>
             <div class="project-body">
               <h3 class="project-title">DevSecOps Pipeline</h3>
