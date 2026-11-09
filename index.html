@@ -423,13 +423,14 @@
               </dl>
               <h4 class="mini-title">Key technical highlights</h4>
               <ul class="highlights">
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. CodeQL code scanning on pull requests]</span></li>
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. Dependabot alerts and version updates]</span></li>
-                <li><span class="ph">[ADD HIGHLIGHT — e.g. secret scanning with push protection]</span></li>
+                <li>CodeQL code scanning (security-extended queries, languages auto-detected) on every pull request, on main and weekly, with results in GitHub code scanning.</li>
+                <li>Dependabot version updates on a weekly schedule, with optional auto-merge for low-risk patch and minor updates, plus dependency review and Trivy filesystem scans that block high-severity issues.</li>
+                <li>Secret detection with Gitleaks (redacted output) on every pull request and push, plus a weekly full-history scan; any secret blocks the merge and follows an incident-response runbook.</li>
+                <li>Infrastructure-as-code and pipeline checks (Checkov, TFLint, Trivy, actionlint, zizmor, SHA-pinned actions), severity-based gates, an expiring exception register and a weekly security report.</li>
               </ul>
               <ul class="tag-list tag-list-sm" aria-label="Technologies used"><li>GitHub Advanced Security</li><li>CodeQL</li><li>Dependabot</li><li>Secret Scanning</li></ul>
               <div class="project-actions">
-                <a class="btn btn-sm btn-secondary" href="#" data-placeholder="[ADD PROJECT LINK]"><svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> Repository</a>
+                <a class="btn btn-sm btn-secondary" href="https://github.com/Projects-by-Promise/DevSecOps" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> Repository</a>
                 <a class="btn btn-sm btn-ghost" href="#" data-placeholder="[ADD PROJECT LINK]"><svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg> Live Demo</a>
               </div>
             </div>
